@@ -1,6 +1,5 @@
 var Details = (function(){
-    var $items;
-    var $content;
+    var $items, $content;
 
     function loadPerson(evt) {
         //var ID = $(evt.target).attr('rel').split('-')[2];
