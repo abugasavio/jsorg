@@ -1,6 +1,6 @@
 var Details = (function(){
-    var $items = $("[rel=js-carousel] > [rel=js-content] > [rel=js-items]");
-    var $content = $("[rel=js-details]");
+    var $items;
+    var $content;
 
     function loadPerson(evt) {
         //var ID = $(evt.target).attr('rel').split('-')[2];
@@ -14,6 +14,8 @@ var Details = (function(){
     }
 
     function init() {
+        $items = $("[rel=js-carousel] > [rel=js-content] > [rel=js-items]");
+        $content = $("[rel=js-details]");
         $items.on("click", "[rel*='js-item-']", loadPerson);
     }
 
