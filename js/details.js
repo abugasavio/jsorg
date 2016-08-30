@@ -10,8 +10,18 @@ var Details = (function(){
             })
     }
 
+    function selectedPerson(evt) {
+        evt.preventDefault();
+        var ID = $(evt.target).attr("data-person");
+        EVT.emit("person-selected", ID);
+
+    }
+
     function init() {
         $content = $("[rel=js-details]");
+
+        $content.on("click", "[rel='js-select-person']", selectedPerson);
+
         EVT.on("person-selected", loadPerson);
     }
 
