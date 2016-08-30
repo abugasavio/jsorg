@@ -1,5 +1,5 @@
+window.EVT = new EventEmitter2();
+
 $(document).ready(function(){
-    Header.init();
-    Details.init();
-    Carousel.init();
+    EVT.emit("init");
 });

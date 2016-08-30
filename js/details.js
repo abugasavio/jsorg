@@ -12,7 +12,10 @@ var Details = (function(){
 
     function init() {
         $content = $("[rel=js-details]");
+        EVT.on("person-selected", loadPerson);
     }
+
+    EVT.on("init", init);
 
     return {
         init: init,

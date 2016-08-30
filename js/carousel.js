@@ -25,7 +25,9 @@ var Carousel = (function(){
 
     function clickPerson(evt) {
         var ID = $(evt.target).attr("rel").replace(/^.*(\d+)$/, "$1");
-        Details.loadPerson(ID);
+
+        EVT.emit("person-selected", ID);
+
     }
 
     function init(){
@@ -52,7 +54,11 @@ var Carousel = (function(){
 
     var $content, $items, $left, $right, contentWidth, itemsWidth, position, maxPosition;
 
+    EVT.on("init", init);
+
     return {
         init: init
     }
+
+
 })();

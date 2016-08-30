@@ -21,6 +21,7 @@ var Header = (function() {
 
     var $modal;
 
+    EVT.on("init", init);
 
     return {
         init: init
